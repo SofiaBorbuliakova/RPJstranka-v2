@@ -62,8 +62,8 @@ body{
 
 .uvod-content1{
     display: flex;
-    padding: 80px;
-    gap: 40px;
+    padding: 110px 200px;
+    gap: 10vh;
     align-items: flex-start;
 }
 
@@ -81,9 +81,9 @@ body{
 .uvod-content2{
     background-color: #4F4139;
     display: flex;
-    padding: 150px;
+    padding: 150px 200px;
     padding-top: 30vh;
-    gap: 30vh;
+    gap: 10vh;
     align-items: flex-start;
 }
 

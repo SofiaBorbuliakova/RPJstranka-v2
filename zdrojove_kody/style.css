@@ -1,5 +1,5 @@
-*{
-	box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 body{
@@ -19,8 +19,10 @@ body{
 }
 
 .uvod1{
-    background-image: url("../obrazky/drevo-pozadie.jpg");
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url("../obrazky/drevo-pozadie.jpeg");
     background-size: cover;
+    background-position: center center;
     height: 60vh;
 }
 
@@ -58,6 +60,11 @@ body{
 .logo {
     width: 150px;
     height: auto;
+}
+
+.obrazok1-img,
+.obrazok2-img {
+    border-radius: 10px; 
 }
 
 .uvod-content1{
@@ -99,32 +106,85 @@ body{
 }
 
 .uvod-content3{
-    background-image: url(/obrazky/drevo-pozadie.jpg);
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url("../obrazky/drevo-pozadie.jpeg");
     background-size: cover;
+    background-position: center center;
     color: white;
     text-align: center;
 }
 
-.uvod-content3 h2{
+.uvod-content3 h1{
     margin: 0;
     padding-top: 50px;
     
 }
 
-.sluzby-cont{
+.sluzby-cont {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 50px;
 }
 
-.zobrazit-viac-btn{
-    background-color: white;
-    color: black;
+.sluzba {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sluzba:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sluzba-ikona {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.sluzba h2 {
+    font-size: 1.3rem;
+    margin: 0 0 15px 0;
+    color: #f8f8f8;
+}
+
+.sluzba p {
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.uvod-content3 h1 {
+    margin: 0;
+    padding-top: 50px;
+}
+
+.zobrazit-viac-btn {
+    background: linear-gradient(45deg, #D4A574, #B89778);
+    color: white;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 25px;
     border: none;
-    padding: 10px 20px;
-    margin-bottom: 50px;
+    padding: 12px 30px;
+    margin: 20px 0 50px 0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.zobrazit-viac-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.4);
 }
 
 .footer{

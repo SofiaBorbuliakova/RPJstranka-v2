@@ -323,3 +323,24 @@ body{
     align-items: flex-start;
     text-align: left;
 }
+
+/* nasa-praca.html css*/
+.nazov-podstranky{
+    display: flex;
+    flex-direction: column;
+}
+
+.nasa-praca-content{
+    background-color: #4F4139;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nasa-praca-text{
+    width: 60vw;
+    padding: 100px 0;
+    text-align: center;
+    font-size: larger;
+}

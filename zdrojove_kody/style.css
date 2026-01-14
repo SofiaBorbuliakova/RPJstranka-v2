@@ -258,6 +258,11 @@ body{
 }
 
 /*kontakt.html css*/
+.kontakt-content{
+    background-color: #4F4139;
+    color: white;
+}
+
 .kontakt-form {
     background: white;
     padding: 20px 24px;
@@ -308,11 +313,9 @@ body{
     background: #1f1f1f;
 }
 
-.kontakt-content {
-    background-color: #4F4139;
-    color: white;
+.kontakt-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 60px;
     height: 80vh;
     align-items: center;
@@ -323,6 +326,17 @@ body{
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+}
+
+.kontakt-content iframe{
+   left: 50%;
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
 }
 
 /* nasa-praca.html css*/
@@ -351,11 +365,53 @@ body{
     justify-content: center;
 }
 
-.nasa-praca-sluzby-section{
+.nasa-praca-section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    width: 70%;
-    margin: 0 auto 100px auto;    
+    gap: 20px;
+    width: 50%;
+    margin: 0 auto 100px auto;   
 }
+
+.karta{
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.karta-velka{
+    border-radius: 20px;
+    grid-column: span 2;
+    overflow: hidden;
+}
+
+.karta img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.karta-text{
+    position: absolute;
+    inset: 0;                 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    pointer-events: none; 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease;   
+}
+
+.karta:hover img {
+    transform: scale(1.05); /* trochu sa zvacsi obrazok */
+    filter: brightness(0.85); /* jemne sa stmavi img */
+}
+
 

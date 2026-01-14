@@ -213,7 +213,8 @@ body{
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     color: white;
-    padding: 25px 50px;
+    padding: 100px 50px;
+    height: 70vh;
 }
 
 .sluzby-container {
@@ -344,3 +345,17 @@ body{
     text-align: center;
     font-size: larger;
 }
+
+.nasa-praca-uvod{
+    display: flex;
+    justify-content: center;
+}
+
+.nasa-praca-sluzby-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 70%;
+    margin: 0 auto 100px auto;    
+}
+

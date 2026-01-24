@@ -64,7 +64,7 @@ body{
 
 .obrazok1-img,
 .obrazok2-img {
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .uvod-content1{
@@ -266,7 +266,7 @@ body{
 .kontakt-form {
     background: white;
     padding: 20px 24px;
-    width: 350px;
+    width: 500px;
     border-radius: 6px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
@@ -358,6 +358,7 @@ body{
     padding: 100px 0;
     text-align: center;
     font-size: larger;
+    font-weight: bold;
 }
 
 .nasa-praca-uvod{
@@ -414,4 +415,161 @@ body{
     filter: brightness(0.85); /* jemne sa stmavi img */
 }
 
+/*responzivita-tablet na sirku*/
+@media (max-width: 1200px) {
+    /*index.html css*/
+    .body{
+        height: 100vh;
+        width: 100vw;
+    }
 
+    .uvod-content1{
+        padding: 100px 50px;
+    }
+
+    .uvod-content2{
+        padding: 200px 50px;
+}
+
+    /*kontakt.html css*/
+    .kontakt-container {
+        padding: 50px;
+        gap: 50px;
+    }
+
+    .kontakt-form {
+        width: 500px;
+    }
+
+}
+
+/*responzivita-tablet na vysku*/
+@media (max-width: 900px) {
+    /*index.html css*/
+    .obrazok1-img, .obrazok2-img {
+        width: 350px;
+        height: auto;
+    }
+
+    .uvod-content1, .uvod-content2 {
+        gap: 50px;
+    }
+
+    .text1 p, .text2 p {
+        width: 300px;
+    }
+
+    .sluzby-cont {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 20px;
+    }
+
+    /*sluzby.html css*/
+    .sluzby-content {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 20px;
+    }
+
+    /*nasa-praca.html css*/
+    .nasa-praca-text{
+        width: 80vw;
+    }
+
+    .nasa-praca-section {
+        width: 65%;
+    }
+
+    /*o-nas.html css*/
+    .o-nas-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .o-nas-text{
+        width: 80vw;
+    }
+
+    .obrazok3-img{
+        width: 70vw;
+    }
+
+    /*kontakt.html css*/
+    .kontakt-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+    }
+}
+
+/*responzivita-mobil*/
+@media (max-width: 700px) {
+    /*index.html css*/
+    .uvod-content1, .uvod-content2 {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .uvod-content2{
+        padding-top: 40vh;
+    }
+
+    .obrazok1-img, .obrazok2-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .text1 p, .text2 p {
+        width: 100%;
+    }
+
+    .footer{
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*sluzby.html css*/
+    .sluzby-content {
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+        height: 100%;
+    }
+
+
+    .sluzby-cont {
+        grid-template-columns: 1fr;
+        padding: 20px 20px;
+    }
+
+    /*nasa-praca.html css*/
+    .nasa-praca-section {
+        width: 80%;
+    }
+
+    .nasa-praca-text{
+        width: 90vw;
+        font-size: small;
+        padding: 50px 0;
+    }
+    
+    .karta-text{
+        font-size: 20px;
+    }
+
+    /*o-nas.html css*/
+    .obrazok3-img{
+        width: 90vw;
+    }
+
+    .o-nas-text{
+        width: 90vw;
+    }
+
+    /*kontakt.html css*/
+    .kontakt-form {
+        width: 100%;
+    }
+    
+}

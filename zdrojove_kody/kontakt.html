@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>PEKRA s.r.o.</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "_SmwpZs4TUDScNbNj",
+        });
+    })();
+    </script>
+    <script src="formular.js"></script>
 </head>
 <body>
     <div class="top-bar">
@@ -43,7 +54,7 @@
 
     <section class="kontakt-content">
         <div class="kontakt-container">
-            <form class="kontakt-form">
+            <form class="kontakt-form" onsubmit="sendMail(event)"  action="#">
                 <div class="form-group">
                     <label for="meno">Meno</label>
                     <input type="text" id="meno" name="meno" placeholder="Meno" required>
@@ -51,7 +62,7 @@
 
                 <div class="form-group">
                     <label for="tel-cislo">Telefónne číslo</label>
-                    <input type="tel" id="tel-cislo" name="tel-cislo" placeholder="Telefónne číslo" required>
+                    <input type="tel" id="telcislo" name="telcislo" placeholder="Telefónne číslo" required>
                 </div>    
                 
                 <div class="form-group">

@@ -33,6 +33,10 @@ body{
     padding: 10px 20px;
 }
 
+#menu-toggle {
+        display: none;
+    }
+
 .nav-bar{
     display: flex;
     align-items: center;
@@ -503,6 +507,13 @@ body{
     }
 }
 
+@media (max-width: 800px) {
+    .obrazok1-img, .obrazok2-img {
+        width: 300px;
+        height: auto;
+    }
+}
+
 /*responzivita-mobil*/
 @media (max-width: 700px) {
     /*index.html css*/
@@ -512,7 +523,7 @@ body{
     }
 
     .uvod-content2{
-        padding-top: 40vh;
+        padding-top: 70vh;
     }
 
     .obrazok1-img, .obrazok2-img{
@@ -571,5 +582,66 @@ body{
     .kontakt-form {
         width: 100%;
     }
-    
+
+    /*hamburger menu*/
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-bar {
+        position: absolute;
+        top: 100%;          /* pod header */
+        left: 0;
+        width: 100%;
+        background: #4F4139;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    #menu-toggle:checked ~ .nav-bar {
+        display: flex;
+    }
 }
+
+@media (max-width: 650px) {
+    .uvod-content2{
+        padding-top: 60vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .uvod-content2{
+        padding-top: 50vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .uvod-content2{
+        padding-top: 40vh;
+    }
+}
+
+

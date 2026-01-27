@@ -13,6 +13,7 @@ function sendMail(event) {
         .then(
             function () {
                 alert("Správa bola úspešne odoslaná");
+                event.target.reset();
             },
             function (error) {
                 alert("Chyba pri odosielaní");

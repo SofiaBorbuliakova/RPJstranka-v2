@@ -239,6 +239,70 @@ body{
     max-width: 350px;
 }
 
+.sluzby-hlavna {
+    background-color: #4F4139;  
+    color: white;
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+.sluzby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sluzba-karta {
+    background: rgba(255, 255, 255, 0.1);  
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.sluzba-karta h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.6rem;
+    color: #f8f8f8;
+}
+
+.sluzba-karta p {
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+    .sluzby-hlavna {
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .sluzby-hlavna {
+        padding: 40px 15px;
+    }
+    .sluzba-karta {
+        padding: 25px;
+    }
+}
+
+.servis-info {
+    background: rgba(212, 165, 116, 0.15);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.servis-info h3 {
+    margin: 0 0 10px 0;
+    color: #f8f8f8;
+    font-size: 1.3rem;
+}
+
 /*o-nas.html css*/
 .o-nas-content{
     background-color: #4F4139;
@@ -249,9 +313,12 @@ body{
     justify-content: center;
 }
 
-.obrazok3-img{
-    width: 40vw;
-    height: auto;
+.obrazok3-img {
+    width: 40vw;           
+    height: auto;          
+    max-height: 500px;     
+    object-fit: cover;     
+    border-radius: 12px;
 }
 
 .o-nas-text{
@@ -268,71 +335,94 @@ body{
     color: white;
 }
 
-.kontakt-form {
-    background: #4F4139;
-    padding: 20px 24px;
-    width: 500px;
-    border-radius: 6px;
-    border: #fff solid 7px;
-    border-color: white;
+.kontakt-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 60px;
+    min-height: 70vh;
+    align-items: flex-start;
+    padding: 60px 40px;
 }
 
-.form-group {
-    margin-bottom: 14px;
+.kontakt-form {
+    background: rgba(120, 100, 85, 0.9);  
+    backdrop-filter: blur(15px);         
+    padding: 30px;
+    width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .kontakt-form label {
     display: block;
-    font-size: 13px;
-    margin-bottom: 6px;
-    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #f0f0f0;             
 }
 
 .kontakt-form input,
 .kontakt-form textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
+    padding: 14px;
+    font-size: 16px;
+    background: #8C7360 ;        
+    color: #f0f0f0;
+    border: 2px solid #A08773 ;
+    border-radius: 8px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.kontakt-form input:focus,
+.kontakt-form textarea:focus {
+    outline: none;
+    border-color: #B49B87 ;      
 }
 
 .kontakt-form textarea {
-    height: 90px;
-    resize: none;
+    height: 120px;
+    resize: vertical;
 }
 
 .kontakt-form button {
     width: 100%;
-    padding: 12px;
-    background: #2f2f2f;
-    color: #fff;
+    padding: 16px;
+    background: #4F4139 ;        
+    color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.3s ease;
+    margin-top: 10px;
 }
 
 .kontakt-form button:hover {
-    background: #1f1f1f;
+    background: #2a241f;
 }
 
-.kontakt-container {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 60px;
-    height: 80vh;
-    align-items: center;
+.kontakt-info h2 {
+    margin: 0 0 25px 0;
+    font-size: 1.4rem;
+    color: #f8f8f8;             
 }
 
-.kontankt-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+.kontakt-info h3 {
+    margin: 20px 0 8px 0;
+    color: #e0e0e0;             
+    font-size: 1.1rem;
 }
+
+.kontakt-info p {
+    margin: 0 0 15px 0;
+    color: #d0d0d0;             
+    font-size: 1rem;
+}
+
 
 .kontakt-content iframe{
    left: 50%;
@@ -517,11 +607,15 @@ body{
     }
 
     /*kontakt.html css*/
+    @media (max-width: 900px) {
     .kontakt-container {
         flex-direction: column-reverse;
         align-items: center;
-        height: auto;
+        height: auto;       /* toto už máš OK */
+        gap: 40px;
+        padding: 40px 20px;
     }
+}
 }
 
 @media (max-width: 800px) {

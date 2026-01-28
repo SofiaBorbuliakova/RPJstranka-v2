@@ -23,7 +23,7 @@ body{
                 url("../obrazky/drevo-pozadie.jpeg");
     background-size: cover;
     background-position: center center;
-    height: 60vh;
+    min-height: 60vh;
 }
 
 .header{
@@ -156,6 +156,10 @@ body{
     display: block;
 }
 
+.sluzba:last-child .sluzba-ikona {
+    transform: rotate(180deg);
+}
+
 .sluzba h2 {
     font-size: 1.3rem;
     margin: 0 0 15px 0;
@@ -274,21 +278,6 @@ body{
     opacity: 0.95;
 }
 
-@media (max-width: 900px) {
-    .sluzby-hlavna {
-        padding: 60px 15px;
-    }
-}
-
-@media (max-width: 700px) {
-    .sluzby-hlavna {
-        padding: 40px 15px;
-    }
-    .sluzba-karta {
-        padding: 25px;
-    }
-}
-
 .servis-info {
     background: rgba(212, 165, 116, 0.15);
     border-radius: 12px;
@@ -358,7 +347,7 @@ body{
     display: block;
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin: 8px 0;
     color: #f0f0f0;             
 }
 
@@ -581,6 +570,10 @@ body{
         padding: 50px 20px;
     }
 
+    .sluzby-hlavna {
+        padding: 60px 15px;
+    }
+
     /*nasa-praca.html css*/
     .nasa-praca-text{
         width: 80vw;
@@ -628,6 +621,10 @@ body{
 /*responzivita-mobil*/
 @media (max-width: 700px) {
     /*index.html css*/
+    .uvod1 {
+        min-height: auto;
+    }
+
     .uvod-content1, .uvod-content2 {
         flex-direction: column;
         padding: 50px 20px;
@@ -663,6 +660,13 @@ body{
     .sluzby-cont {
         grid-template-columns: 1fr;
         padding: 20px 20px;
+    }
+
+    .sluzby-hlavna {
+        padding: 40px 15px;
+    }
+    .sluzba-karta {
+        padding: 25px;
     }
 
     /*nasa-praca.html css*/
@@ -759,8 +763,7 @@ body{
 
 @media (max-width: 450px) {
     .uvod-content2{
-        padding-top: 40vh;
+        padding-top: 10vh;
     }
 }
-
 

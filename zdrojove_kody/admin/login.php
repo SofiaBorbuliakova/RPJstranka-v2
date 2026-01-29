@@ -1,0 +1,43 @@
+<?php
+session_start();
+
+if (isset($_SESSION['admin'])) {
+    header("Location: dashboard.php");
+    exit();
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $meno = $_POST['meno'];
+    $heslo = $_POST['heslo'];
+
+    if ($meno === "admin" && $heslo === "admin123") {
+        $_SESSION['admin'] = true;
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        $chyba = "Nesprávne prihlasovacie údaje";
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin prihlásenie</title>
+</head>
+<body>
+
+<h2>Prihlásenie do admin sekcie</h2>
+
+<form method="post">
+    <input type="text" name="meno" placeholder="Meno" required><br><br>
+    <input type="password" name="heslo" placeholder="Heslo" required><br><br>
+    <button type="submit">Prihlásiť</button>
+</form>
+
+<p style="color:red;">
+    <?= $chyba ?? '' ?>
+</p>
+
+</body>
+</html>

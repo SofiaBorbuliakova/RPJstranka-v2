@@ -508,6 +508,26 @@ body{
     filter: brightness(0.85); /* jemne sa stmavi img */
 }
 
+/*galeria css*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* automatické stĺpce */
+    gap: 20px; /* medzery medzi obrázkami */
+    padding: 20px;
+}
+
+.galeria-img {
+    width: 100%;        /* fotka vyplní celú šírku bunky */
+    height: 200px;      /* jednotná výška pre všetky */
+    object-fit: cover;  /* oreže fotku, aby vyplnila priestor bez deformácie */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+    transform: scale(1.05); /* jemný zoom pri hover */
+}
+
 /*responzivita-tablet na sirku*/
 @media (max-width: 1200px) {
     /*index.html css*/

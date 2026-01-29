@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
     <title>PEKRA s.r.o.</title>
 </head>
 <body>
@@ -31,7 +34,7 @@
             <nav class="nav-bar">
                 <a class="uvod-menu" href="index.html">Úvod</a>
                 <a href="sluzby.html">Služby</a>
-                <a href="nasa-praca.html">Naša práca</a>
+                <a href="nasa-praca.php">Naša práca</a>
                 <a href="o-nas.html">O nás</a>
                 <a href="kontakt.html">Kontakt</a>
             </nav>
@@ -41,8 +44,21 @@
         </section>
     </section>
 
-    <section class="kuchyne-content">
-        
-    </section>
+    <section class="galeria">
+        <?php
+        $kat = "kuchyne"; // názov kategórie
+        $obrazky = glob("../obrazky/$kat/*.{jpg,jpeg,png}", GLOB_BRACE);
+
+        if (empty($obrazky)) {
+            echo "<p>Zatiaľ žiadne realizácie ".strtoupper($kat).".</p>";
+        } else {
+            foreach ($obrazky as $img) {
+                echo "<a href='$img' data-lightbox='galeria-$kat'>";
+                echo "<img src='$img' class='galeria-img'>";
+                echo "</a>";
+            }
+        }
+        ?>
+</section>
 </body>
 </html>

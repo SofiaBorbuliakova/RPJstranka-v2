@@ -60,5 +60,9 @@
         }
         ?>
 </section>
+    <footer class="footer">
+        <p>&#169; 2025 Pekra. Všetky práva vyhradené.</p>
+        <p>Vytvorili Nikola Petrašková a Sofia Borbuliaková</p>
+    </footer>
 </body>
 </html>

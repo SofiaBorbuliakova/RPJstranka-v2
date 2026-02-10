@@ -23,10 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
     <title>Admin prihlásenie</title>
 </head>
 <body>
 
+<section class="admin-login">
 <h2>Prihlásenie do admin sekcie</h2>
 
 <form method="post">
@@ -38,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <p style="color:red;">
     <?= $chyba ?? '' ?>
 </p>
+</section>
 
 </body>
 </html>

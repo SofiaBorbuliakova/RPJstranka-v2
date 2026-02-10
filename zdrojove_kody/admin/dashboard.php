@@ -7,7 +7,23 @@ if (!isset($_SESSION['admin'])) {
 }
 ?>
 
-<h1>Admin panel</h1>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
 
-<a href="nasa-praca.php">Naša práca – správa fotiek</a><br><br>
-<a href="logout.php">Odhlásiť</a>
+<body class="admin-panel">
+
+<h1 style="text-align:center;">Admin panel</h1>
+
+<div class="admin-menu">
+    <a href="nasa-praca.php">Naša práca – správa fotiek</a>
+    <a href="logout.php" class="logout">Odhlásiť</a>
+</div>
+
+
+</body>
+</html>

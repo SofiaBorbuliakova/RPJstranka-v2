@@ -56,7 +56,6 @@ if (isset($_POST['upload'])) {
 <h1 style="text-align: center;">Admin – Naša práca</h1>
 
 <div class="admin-top-menu">
-    <a href="dashboard.php" class="admin-btn">Späť na panel</a>
     <a href="logout.php" class="admin-btn logout">Odhlásiť</a>
 </div>
 

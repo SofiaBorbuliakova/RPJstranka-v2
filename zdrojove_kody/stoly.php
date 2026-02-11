@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
@@ -62,7 +63,7 @@
 </section>
 
     <footer class="footer">
-        <p>&#169; 2025 Pekra. Všetky práva vyhradené.</p>
+        <p>&#169; 2026 Pekra. Všetky práva vyhradené.</p>
         <p>Vytvorili Nikola Petrašková a Sofia Borbuliaková</p>
     </footer>
 </body>

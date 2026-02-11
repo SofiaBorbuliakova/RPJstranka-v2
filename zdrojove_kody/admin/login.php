@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['admin'])) {
-    header("Location: dashboard.php");
+    header("Location: nasa-praca.php");
     exit();
 }
 
@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $meno = $_POST['meno'];
     $heslo = $_POST['heslo'];
 
-    if ($meno === "admin" && $heslo === "admin123") {
+    if ($meno === "admin" && $heslo === "pekraAdmin2026") {
         $_SESSION['admin'] = true;
-        header("Location: dashboard.php");
+        header("Location: nasa-praca.php");
         exit();
     } else {
         $chyba = "Nesprávne prihlasovacie údaje";

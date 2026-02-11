@@ -529,9 +529,36 @@ body{
     transform: scale(1.05); 
 }
 
-/*responzivita-tablet na sirku*/
-@media (max-width: 1200px) {
+/*responzivita-desktop*/
+@media(max-width: 2000px) {
     /*index.html css*/
+    .uvod1{
+        min-height: 50vh;
+    }
+
+    .uvod-content2{    
+        padding-top: 0;
+        padding: 150px 200px;
+    }
+
+    /*sluzby.html css*/
+    .sluzby-hlavna{
+        min-height: 50vh;
+    }
+}
+
+/*responzivita-tablet na sirku*/
+@media (max-width: 1400px) {
+    /*index.html css*/
+    .uvod1{
+        min-height: auto;
+    }
+
+    .nazov-podstranky{
+        margin-top: 0;
+        height: 25vh;
+    }
+
     .body{
         height: 100vh;
         width: 100vw;
@@ -539,16 +566,29 @@ body{
 
     .uvod-content1{
         padding: 100px 50px;
+        gap: 5vh;
     }
 
     .uvod-content2{
         padding: 200px 50px;
-}
+    }
+
+    /*sluzby.html css*/
+    .sluzby-hlavna{
+        min-height: 65vh;
+    }
+
+    /*o-nas.html css*/
+    .o-nas-content{
+        min-height: 65vh;
+        align-items: center;
+    }
 
     /*kontakt.html css*/
     .kontakt-container {
         padding: 50px;
         gap: 50px;
+        min-height: auto;
     }
 
     .kontakt-form {
@@ -566,7 +606,15 @@ body{
 
 /*responzivita-tablet na vysku*/
 @media (max-width: 900px) {
+    .nazov-podstranky{
+        margin-top: 0;
+        height: 20vh;
+    }
     /*index.html css*/
+    .uvod1{
+        min-height: 30vh;
+    }
+
     .obrazok1-img, .obrazok2-img {
         width: 350px;
         height: auto;
@@ -593,6 +641,7 @@ body{
 
     .sluzby-hlavna {
         padding: 60px 15px;
+        min-height: auto;
     }
 
     /*nasa-praca.html css*/
@@ -641,6 +690,10 @@ body{
 
 /*responzivita-mobil*/
 @media (max-width: 700px) {
+    .nazov-podstranky{
+        margin-top: 0;
+        height: 20vh;
+    }
     /*index.html css*/
     .uvod1 {
         min-height: auto;
@@ -824,41 +877,6 @@ body{
 
 .admin-login button:hover {
     background: #2a241f;
-}
-
-/* admin dashboard */
-.admin-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: white;
-    padding: 30px;
-    max-width: 400px;
-    margin: 50px auto;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    gap: 15px;
-}
-
-.admin-menu a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-
-    background: #4F4139;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.admin-menu a.logout {
-    background: #b00020;
-}
-
-.admin-menu a.logout:hover {
-    background: #7a0015;
 }
 
 /* admin galeria */

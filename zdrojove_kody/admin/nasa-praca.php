@@ -10,7 +10,7 @@ if (!isset($_SESSION['admin'])) {
 // MAZANIE FOTIEK
 // -----------------------
 if (isset($_GET['zmaz'])) {
-    $cesta = "../../obrazky/" . $_GET['zmaz'];
+    $cesta = "../obrazky/" . $_GET['zmaz'];
 
     if (file_exists($cesta)) {
         unlink($cesta);
@@ -26,7 +26,7 @@ if (isset($_GET['zmaz'])) {
 if (isset($_POST['upload'])) {
 
     $kategoria = $_POST['kategoria'];
-    $ciel = "../../obrazky/$kategoria/";
+    $ciel = "../obrazky/$kategoria/";
 
     // pre každú vybranú fotku
     foreach ($_FILES['foto']['tmp_name'] as $key => $tmp_name) {
@@ -98,7 +98,7 @@ foreach ($kategorie as $folder => $nazov) {
 
     echo "<h3 style='text-align:center;'>$nazov</h3>";
 
-    $imgs = glob("../../obrazky/$folder/*.{jpg,jpeg,png}", GLOB_BRACE);
+    $imgs = glob("../obrazky/$folder/*.{jpg,jpeg,png}", GLOB_BRACE);
 
     if (empty($imgs)) {
         echo "<p style='text-align:center;'>Žiadne fotografie.</p>";

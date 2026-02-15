@@ -19,7 +19,7 @@
     <section class="uvod1">
         <header class="header">
             <a href="index.html">
-                <img src="../obrazky/logo.jpg" alt="logo" class="logo">
+                <img src="obrazky/logo.jpg" alt="logo" class="logo">
             </a>
 
             <!-- checkbox -->
@@ -48,7 +48,7 @@
     <section class="galeria">
         <?php
         $kat = "police"; // názov kategórie
-        $obrazky = glob("../obrazky/$kat/*.{jpg,jpeg,png}", GLOB_BRACE);
+        $obrazky = glob("obrazky/$kat/*.{jpg,jpeg,png}", GLOB_BRACE);
 
         if (empty($obrazky)) {
             echo "<p>Zatiaľ žiadne realizácie ".strtoupper($kat).".</p>";

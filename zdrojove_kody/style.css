@@ -208,7 +208,7 @@ body{
 
 /*sluzby.html css*/
 .nazov-podstranky{
-    margin-top: 15vh;
+    margin-top: 10vh;
     font-size: larger;
     color: white;
     display: flex;
@@ -530,6 +530,12 @@ body{
 }
 
 /*responzivita-desktop*/
+@media(max-width: 2500px){
+    .nazov-podstranky{
+        margin-top: 20vh;
+    }
+}
+
 @media(max-width: 2000px) {
     /*index.html css*/
     .uvod1{
@@ -544,6 +550,10 @@ body{
     /*sluzby.html css*/
     .sluzby-hlavna{
         min-height: 50vh;
+    }
+
+    .nazov-podstranky{
+        margin-top: 10vh;
     }
 }
 

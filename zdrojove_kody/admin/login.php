@@ -10,7 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $meno = $_POST['meno'];
     $heslo = $_POST['heslo'];
 
-    if ($meno === "admin" && $heslo === "pekraAdmin2026") {
+    $spravneMeno = "admin";
+    $hashPass = '$2y$10$uPDnUZZkYm9zKAkF2MFRXe5W6kGMpb00JLYRLIExXHsJUS1uoIbh2';
+
+    if ($meno === $spravneMeno && password_verify($heslo, $hashPass)) {
         $_SESSION['admin'] = true;
         header("Location: nasa-praca.php");
         exit();
